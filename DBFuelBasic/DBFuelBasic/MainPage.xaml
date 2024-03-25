@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBFuelBasic.MainPage">
+
+    <StackLayout>
+        <!-- Button to Add a New Fuel Record -->
+        <Button Text="Add Random Record" Clicked="OnAddRecordClicked"/>
+
+        <!-- ListView to Display Fuel Records -->
+        <ListView x:Name="fuelRecordsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Date}" Detail="{Binding Litres, StringFormat='{0} litres at {1:C}'}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

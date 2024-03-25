@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBExample1.MainPage">
+
+    <StackLayout Padding="20">
+        <Entry x:Name="NewItemName" Placeholder="Enter new item name"/>
+        <Button Text="Add Item" Clicked="AddItem_Clicked"/>
+        <ListView x:Name="ItemsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Done, Converter={StaticResource boolToTextConverter}}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
