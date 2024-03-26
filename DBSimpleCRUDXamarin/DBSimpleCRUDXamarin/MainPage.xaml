@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBSimpleCRUDXamarin.MainPage">
+
+    <StackLayout VerticalOptions="Start" Padding="20">
+        <Button Text="View Items" Clicked="OnViewItemsClicked"/>
+        <Button Text="Add Item" Clicked="OnAddItemClicked"/>
+        <Button Text="Edit item" Clicked="OnViewItemsClicked"/>
+        <Button Text="Delete" Clicked="OnAddItemClicked"/>
+    </StackLayout>
+</ContentPage>

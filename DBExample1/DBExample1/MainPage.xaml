@@ -9,7 +9,7 @@
         <ListView x:Name="ItemsListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Done, Converter={StaticResource boolToTextConverter}}" />
+                    <TextCell Text="{Binding Name}" Detail="{Binding Done}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -33,10 +33,16 @@ namespace DBExample1
 
         private async void AddItem_Clicked(object sender, EventArgs e)
         {
-            var newItem = new TodoItem { Name = $"Todo {Items.Count + 1}", Done = false };
+
+            var newItem = new TodoItem()
+            { 
+                Name = NewItemName.Text,
+                Done = true
+            };
             await App.Database.SaveItemAsync(newItem);
             Items.Add(newItem);
         }
+        
     }
 }
 
