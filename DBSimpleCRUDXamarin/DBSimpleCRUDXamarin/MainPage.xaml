@@ -6,7 +6,7 @@
     <StackLayout VerticalOptions="Start" Padding="20">
         <Button Text="View Items" Clicked="OnViewItemsClicked"/>
         <Button Text="Add Item" Clicked="OnAddItemClicked"/>
-        <Button Text="Edit item" Clicked="OnViewItemsClicked"/>
-        <Button Text="Delete" Clicked="OnAddItemClicked"/>
+        <Button Text="Edit item" />
+        <Button Text="Delete" />
     </StackLayout>
 </ContentPage>

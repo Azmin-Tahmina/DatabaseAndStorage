@@ -14,22 +14,22 @@ namespace DBSimpleCRUDXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
-        static DatabaseHelper databaseHelper;
-        public static DatabaseHelper database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ItemDatabase.db3");
-                    databaseHelper = new DatabaseHelper(dbPath);
-                }
-                return databaseHelper;
-            }
-        }
+        //static DatabaseHelper databaseHelper;
+        //public static DatabaseHelper database
+        //{
+        //    get
+        //    {
+        //        if (database == null)
+        //        {
+        //            var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ItemDatabase.db3");
+        //            databaseHelper = new DatabaseHelper(dbPath);
+        //        }
+        //        return databaseHelper;
+        //    }
+        //}
         // we can pass the tablenames to make it generic
         
         protected override void OnStart()

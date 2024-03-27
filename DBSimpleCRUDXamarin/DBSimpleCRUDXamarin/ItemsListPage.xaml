@@ -6,11 +6,10 @@
         <ToolbarItem Text="Add" Clicked="OnAddClicked"/>
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <!-- Items will be displayed here -->
         <ListView x:Name="itemsListView" ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Price}"/>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Description}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

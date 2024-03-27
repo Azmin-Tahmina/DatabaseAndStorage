@@ -13,8 +13,9 @@ namespace DBSimpleCRUDXamarin
     {
         public SQLiteConnection database;
 
-        public DatabaseHelper(string dbPath)
+        public DatabaseHelper()
         {
+            string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ItemDatabase1.db3");
             database = new SQLiteConnection(dbPath);
             database.CreateTable<ItemTableStructure>();
             if (database.Table<ItemTableStructure>().Count() == 0) //if no records  make one
@@ -23,7 +24,10 @@ namespace DBSimpleCRUDXamarin
                 ItemTableStructure newItem = new ItemTableStructure();
                 newItem.Name = "Test Name";
                 newItem.Description = "Test Description";
+                database.Insert(newItem);
             }
+
+
         }
 
         // CRUD Operations

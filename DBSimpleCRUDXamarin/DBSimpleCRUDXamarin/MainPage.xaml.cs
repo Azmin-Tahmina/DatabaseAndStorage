@@ -15,16 +15,18 @@ namespace DBSimpleCRUDXamarin
             InitializeComponent();
         }
 
-        private async void ViewItems_Clicked(object sender, EventArgs e)
+        public async void OnViewItemsClicked(object sender, EventArgs e)
         {
             // Navigate to the Items View Page
             await Navigation.PushAsync(new ItemsListPage());
         }
 
-        private async void AddItem_Clicked(object sender, EventArgs e)
+        public async void OnAddItemClicked(object sender, EventArgs e)
         {
             // Navigate to the Add Item Page
             await Navigation.PushAsync(new AddItemPage());
         }
+
+       
     }
 }
