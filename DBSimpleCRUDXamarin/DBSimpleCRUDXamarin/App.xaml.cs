@@ -31,7 +31,7 @@ namespace DBSimpleCRUDXamarin
         //    }
         //}
         // we can pass the tablenames to make it generic
-        
+
         protected override void OnStart()
         {
 

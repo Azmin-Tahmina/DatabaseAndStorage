@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBSimpleCRUDMAUI.NavigationPages.assignCourses"
+             Title="assignCourses">
+    <VerticalStackLayout>
+
+        <ListView x:Name="ItemsListView" 
+              HeightRequest="200"
+              ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--multiple label or data binding needed-->
+                    <TextCell Text="{Binding id}" Detail="{Binding courseDescription} "/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection>
+                    <EntryCell Label="Course ID" x:Name="cIdEntry"/>
+                    <EntryCell Label="Course Name" x:Name="cNameEntry"/>
+                    <EntryCell Label="Course Description" x:Name="cDescEntry"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Picker x:Name="coursePicker" 
+                ItemDisplayBinding="{Binding courseName}"
+                Title="Select an Item"/>
+        <Button Text="Save Course Data" Clicked="saveCourseData"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DBSimpleCRUDMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DBSimpleCRUDMAUI"
+    xmlns:views="clr-namespace:DBSimpleCRUDMAUI.NavigationPages"
+    Title="DBSimpleCRUDMAUI">
+
+    <FlyoutItem Title="Home" Icon="icon_home.png">
+        <ShellContent ContentTemplate="{DataTemplate views:home}" />
+    </FlyoutItem>
+
+    <!--<FlyoutItem Title="Settings" Icon="icon_settings.png">
+        <ShellContent ContentTemplate="{DataTemplate views:add}" />
+    </FlyoutItem>-->
+
+    <!--<TabBar>
+        <Tab Title="Home" Icon="icon_home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:home}" />
+        </Tab>
+        <Tab Title="Settings" Icon="icon_settings.png">
+            <ShellContent ContentTemplate="{DataTemplate views:add}" />
+        </Tab>
+    </TabBar>-->
+
+    </Shell>

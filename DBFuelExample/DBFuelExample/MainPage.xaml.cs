@@ -13,6 +13,7 @@ namespace DBFuelExample
         public MainPage()
         {
             InitializeComponent();
+            //App.Database.GetItems();
         }
     }
 }

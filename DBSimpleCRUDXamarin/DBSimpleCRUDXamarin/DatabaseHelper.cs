@@ -36,6 +36,12 @@ namespace DBSimpleCRUDXamarin
             database.Insert(item);
         }
 
+        //public void additem1(string item)
+        //{
+        //    item testitem = new itemtablestructure();
+        //    database.insert(item);
+        //}
+
         public IEnumerable<ItemTableStructure> GetItems()
         {
             return database.Table<ItemTableStructure>().ToList();

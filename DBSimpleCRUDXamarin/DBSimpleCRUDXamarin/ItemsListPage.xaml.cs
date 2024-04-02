@@ -18,11 +18,11 @@ namespace DBSimpleCRUDXamarin
         public ItemsListPage()
         {
             InitializeComponent();
-            var items = db.GetItems();
-            foreach (var item in items)
-            {
-                Debug.WriteLine($"Item Name: {item.Name}");
-            }
+            //var items = db.GetItems();
+            //foreach (var item in items)
+            //{
+            //    Debug.WriteLine($"Item Name: {item.Name}");
+            //}
             //itemsListView.ItemsSource= db.GetItems();
             // Load items when the page appears
 

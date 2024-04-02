@@ -13,5 +13,6 @@ namespace DBSimpleCRUDXamarin
         public string Description { get; set; }
 
         // we need to apply validation
+
     }
 }

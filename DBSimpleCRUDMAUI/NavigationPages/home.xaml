@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBSimpleCRUDMAUI.NavigationPages.home"
+             Title="Student List">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Courses" Clicked="addCoursesClicked" Priority="0" />
+        <ToolbarItem Text="Assign Courses" Clicked="assignCoursesClicked" Priority="1" />
+        <ToolbarItem Text="Course Details" Clicked="courseDetailsClicked" Priority="2" />
+        <ToolbarItem Text="Help" Clicked="OnMoreClicked" Priority="3" />
+    </ContentPage.ToolbarItems>
+    <VerticalStackLayout>
+        <ListView x:Name="ItemsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout>
+                            <!--Make this view more formatted-->
+                            <Label Text="{Binding fullName}"
+                                   VerticalOptions="Center" />
+                            <Label Text="{Binding id}"
+                                   VerticalOptions="Center" />
+                            <Label Text="{Binding active}"
+                                   VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Enroll New Student"
+         Clicked="addNewStudent"/>
+    </VerticalStackLayout>
+
+</ContentPage>
