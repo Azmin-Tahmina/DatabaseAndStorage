@@ -65,7 +65,12 @@ public partial class home : ContentPage
         await Shell.Current.GoToAsync("assignCourses", true);
     }
 
-    private void courseDetailsClicked(object sender, EventArgs e)
+    private async void courseDetailsClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("courseDetailsSummary", true);
+    }
+
+    private void editStudent(object sender, SelectedItemChangedEventArgs e)
     {
 
     }

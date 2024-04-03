@@ -31,6 +31,15 @@ namespace DBSimpleCRUDMAUI
             return items;
         }
 
+        public List<T> GetActiveItems<T>() where T : new()
+        {
+            List<T> items = new List<T>();
+            //how to find listTypeName
+            String listTypeName = items.GetType().GenericTypeArguments[0].Name;
+
+            return database.Query<T>($"SELECT * FROM [{listTypeName}] WHERE [active] = 1");
+        }
+
         public int SaveItem<T>(T item) where T : new()
         {
             

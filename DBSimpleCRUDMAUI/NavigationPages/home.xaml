@@ -9,20 +9,39 @@
         <ToolbarItem Text="Course Details" Clicked="courseDetailsClicked" Priority="2" />
         <ToolbarItem Text="Help" Clicked="OnMoreClicked" Priority="3" />
     </ContentPage.ToolbarItems>
-    <VerticalStackLayout>
-        <ListView x:Name="ItemsListView">
+    
+    <ScrollView>
+       <VerticalStackLayout>
+        <ListView x:Name="ItemsListView"
+                  RowHeight="100"
+                   HeightRequest="500"
+                   ItemSelected="editStudent">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <HorizontalStackLayout>
-                            <!--Make this view more formatted-->
+                        <!--<HorizontalStackLayout>
+                            --><!--Make this view more formatted--><!--
                             <Label Text="{Binding fullName}"
                                    VerticalOptions="Center" />
                             <Label Text="{Binding id}"
                                    VerticalOptions="Center" />
                             <Label Text="{Binding active}"
                                    VerticalOptions="Center" />
-                        </HorizontalStackLayout>
+                        </HorizontalStackLayout>-->
+                        <StackLayout BackgroundColor="#eee"
+                                     Orientation="Vertical">
+                                <Label Text="{Binding fullName}"
+                                   TextColor="BlueViolet" 
+                                   FontAttributes="Bold"/>
+                                <Label Text="{Binding formattedId}"
+                                       FontAttributes="Bold"
+                                       TextColor="#503026" />
+                            <Label Text="Active Student?"/>
+                            <Switch HorizontalOptions="Start"
+                                            VerticalOptions="End"
+                                            IsEnabled="True"
+                                            IsToggled="{Binding active}"/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -30,5 +49,8 @@
         <Button Text="Enroll New Student"
          Clicked="addNewStudent"/>
     </VerticalStackLayout>
-
+        
+    </ScrollView>
+    
+    
 </ContentPage>

@@ -13,6 +13,8 @@ namespace DBSimpleCRUDMAUI
             Routing.RegisterRoute("addCourses", typeof(addCourses));
             Routing.RegisterRoute("assignCourses", typeof(assignCourses));
             Routing.RegisterRoute("editOrViewStudent", typeof(editOrViewStudent));
+            Routing.RegisterRoute("courseDetailsSummary", typeof(courseDetailsSummary));
+            
 
         }
     }

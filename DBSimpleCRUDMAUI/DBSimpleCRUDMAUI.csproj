@@ -73,6 +73,9 @@
 	  <MauiXaml Update="NavigationPages\assignCourses.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NavigationPages\courseDetailsSummary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NavigationPages\editOrViewStudent.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

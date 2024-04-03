@@ -2,16 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DBSimpleCRUDMAUI.NavigationPages.assignCourses"
-             Title="assignCourses">
+             Title="Assign Courses">
     <VerticalStackLayout>
 
         <ListView x:Name="ItemsListView" 
-              HeightRequest="200"
+              HeightRequest="300"
               ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!--multiple label or data binding needed-->
-                    <TextCell Text="{Binding id}" Detail="{Binding courseDescription} "/>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee"
+                          Orientation="Vertical">
+                            <Label Text="{Binding fullName}"
+                        TextColor="BlueViolet" 
+                        FontAttributes="Bold"/>
+                            <Label Text="{Binding formattedId}"
+                            FontAttributes="Bold"
+                            TextColor="#503026" />
+                            <Label Text="Active Student?"/>
+                            <Switch HorizontalOptions="Start"
+                                 VerticalOptions="End"
+                                 IsEnabled="True"
+                                 IsToggled="{Binding active}"/>
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
@@ -19,15 +33,16 @@
         <TableView Intent="Form">
             <TableRoot>
                 <TableSection>
-                    <EntryCell Label="Course ID" x:Name="cIdEntry"/>
-                    <EntryCell Label="Course Name" x:Name="cNameEntry"/>
-                    <EntryCell Label="Course Description" x:Name="cDescEntry"/>
+                    <EntryCell Label="Student Name:" x:Name="cNameEntry"/>
+                    <EntryCell Label="Student ID:" x:Name="cIdEntry"/>
                 </TableSection>
             </TableRoot>
         </TableView>
         <Picker x:Name="coursePicker" 
+                FontAttributes="Bold"
                 ItemDisplayBinding="{Binding courseName}"
-                Title="Select an Item"/>
+                SelectedIndexChanged="CoursePickerSelectedIndexChanged"
+                Title="Select Course From List"/>
         <Button Text="Save Course Data" Clicked="saveCourseData"/>
     </VerticalStackLayout>
 </ContentPage>

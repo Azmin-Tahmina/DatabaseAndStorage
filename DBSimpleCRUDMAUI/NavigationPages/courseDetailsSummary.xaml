@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DBSimpleCRUDMAUI.NavigationPages.courseDetailsSummary"
+             Title="Course Detail Summary">
+    <ScrollView>
+        <VerticalStackLayout>
+            <ListView x:Name="ItemsListView"
+              RowHeight="100"
+               HeightRequest="500">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#eee"
+                                 Orientation="Vertical">
+                                <Label Text="{Binding studentId}"
+                               TextColor="BlueViolet" 
+                               FontAttributes="Bold"/>
+                                <Label Text="{Binding courseId}"
+                                   FontAttributes="Bold"
+                                   TextColor="#503026" />
+                                <Label Text="Active Student?"/>
+                                <Switch HorizontalOptions="Start"
+                                        VerticalOptions="End"
+                                        IsEnabled="True"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
